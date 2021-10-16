@@ -110,6 +110,8 @@ column-gap: 10px;
             grid-row: 3/5;
             grid-column: 1/-1;
             padding : 1em 2em;
+            border-top-right-radius: 0px;
+            border-top-left-radius: 0px;
             &::before{
                 content: none;
             }

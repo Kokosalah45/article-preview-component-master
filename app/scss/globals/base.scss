@@ -2,10 +2,8 @@ body{
     font-size: var(--fs-400);
     font-family : var(--ff-primary);
     min-height: 100vh;
-    display: grid;
-    place-items: center;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color : var(--clr-background);
-}
-:root{
-    --transform-scale : scale(0);
 }
