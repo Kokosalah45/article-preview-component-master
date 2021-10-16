@@ -1,0 +1,12 @@
+:root{
+    --fs-400 : 0.8125rem;
+    --fs-700 : 1.2rem;
+}
+
+@media screen and (max-width: 39em){
+    :root{
+        --fs-400 : 0.79rem;
+        --fs-700 : 0.95rem;
+    }
+
+}

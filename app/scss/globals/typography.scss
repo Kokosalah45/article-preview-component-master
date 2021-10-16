@@ -1,0 +1,25 @@
+.main{
+    &__intro{
+        p{
+            color : var(--clr-intro);
+        }
+        & > p:first-child{
+            font-size: var(--fs-700);
+            font-weight: var(--fw-semibold);
+            color : var(--clr-header);
+        }
+       
+    }
+
+    
+}
+.side{
+    &__user-name{
+        font-weight: var(--fw-semibold);
+        color : var(--clr-username);
+    }
+    &__date{
+        color: var(--clr-date);
+    }
+
+}

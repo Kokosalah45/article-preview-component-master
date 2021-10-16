@@ -1,0 +1,50 @@
+.side{
+    position: relative;
+    
+    &__profile-image,
+    &__share{
+        grid-row: span 2;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: .3s all ease-in-out;
+       
+        
+    }
+    &__profile-image{
+        display: flex;
+        img{
+            max-width: 35px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__share{
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        background-color: var( --clr-background);
+        img{
+            max-width: 35px;
+        }
+            
+    }
+   &__date{
+    grid-row: 2;
+    grid-column: 2/3;
+   }
+ 
+
+
+}
+.active-mobile{
+    position: relative;
+    transform: translateY(12px);
+    background-color: var(--clr-intro);
+    z-index: 1
+    ;
+    img{
+        filter: brightness(0) invert(1);
+    }
+}

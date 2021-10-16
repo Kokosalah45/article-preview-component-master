@@ -1,0 +1,101 @@
+card view min width 650 / 16
+
+body
+min-height: 100vh;
+display: grid;
+place-items: center;
+font size : 0.8125rem
+------------------------------------------------
+main
+max-width: 40em;
+display: grid;
+grid-template-columns: 250px 1fr auto;
+grid-template-rows: 1em 1fr auto 1em;
+padding: 5em;
+gap: 15px 2em; //row column 
+border-radius: 5px;
+overflow: hidden;
+box-shadow: 3px 4px 45px -20px gray;
+line-height: 1.3;
+-------------------------------------------------
+main figure :
+grid-row: 1/-1;
+main figure image : 
+height: 100%;
+object-fit: cover;
+object-position: left;
+--------------------------------------------
+main section : 
+grid-row: 2/3;
+display: flex;
+flex-direction: column;
+gap: 1em;
+main section header
+font-size : 1.4rem;
+-------------------------------------------
+main aside 
+grid-column: 2 /3;
+display: grid;
+grid-template-columns: auto 1fr auto;
+grid-template-rows: auto auto;
+grid-row: 3/4;
+row-gap: 2px;
+column-gap: 10px;
+
+
+main aside figure 
+    grid-row: span 2;
+    border-radius: 50%;
+    overflow: hidden;
+main aside figure image 
+max-width: 35px;
+main aside username 
+font-weight: 700;
+main aside date
+grid-row: 2;
+grid-column: 2/3;
+
+.active{
+    transform : scale(1);
+   
+}
+ active-mobile{
+        position: relative;
+        transform: translateY(12px);
+        background-color: var(--clr-intro);
+        img{
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    
+const button = document.querySelector('.side__share');
+const socials = document.querySelector('.main__socials');
+button.addEventListener('mouseover' , activeState);
+button.addEventListener('click' , activeState.bind(1));
+button.addEventListener('mouseout' , deActiveState);
+button.addEventListener('click' , deActiveState.bind(1));
+
+const activeState = (flag = 0 ) =>{
+    if(flag){
+        socials.classList.add('active' , 'clicked');
+    }else{
+        socials.classList.add('active');
+    }
+    button.classList.add('active-mobile');
+}
+ const deActiveState = (flag = 0) =>{
+     if(flag || (!flag && !socials.classList.contains('clicked'))){ 
+      socials.classList.remove('active' , 'clicked');
+      button.classList.remove('active-mobile');
+     }
+}
+
+
+
+ desktop javascript pseudo
+ mouse in reveal the share 
+ click reveal the share and add a unique identifire to know that i'ts clicked
+ mouse out hide it if and only if this unique identifier is not there 
+ so to hide it i have to share or click again on the button hide it and remove the identifier
+
